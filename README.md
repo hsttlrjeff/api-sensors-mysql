@@ -1,3 +1,5 @@
 ## Introduction
 
-Description of your project here.
+Work in progress.
+
+node.js express REST API.  Utilizes Sequelize with MySQL.
