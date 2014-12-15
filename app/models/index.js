@@ -22,7 +22,7 @@ if (!global.hasOwnProperty('db')) {
   }
   */
   sequelize = new Sequelize(config.connectionString, {
-    logging: false
+    logging: true
   });
  
   global.db = {
