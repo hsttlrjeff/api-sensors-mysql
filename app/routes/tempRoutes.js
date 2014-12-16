@@ -26,7 +26,7 @@ router.route('/readings/temp')
 
 router.route('/readings/temp/:locationId')
     .get(function(req, res) {
-        db.EnvironmentReadings.find({where: {id: req.params.locationId}, include: [{model:db.HouseLocations},{model:db.SensorTypes}]}).then(function(temps) {
+        db.EnvironmentReadings.findAll({where: {houselocationId: req.params.locationId}, include: [{model:db.HouseLocations},{model:db.SensorTypes}]}).then(function(temps) {
             res.json(temps);
         },function(err) {
             res.send(err);
